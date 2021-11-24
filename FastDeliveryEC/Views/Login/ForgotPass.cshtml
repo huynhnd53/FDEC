@@ -1,0 +1,71 @@
+﻿@model ForgotPassModel
+@{
+    Layout = "_SigninLayout";
+    ViewData["Title"] = "Verify Password";
+}
+@*<div class="login-form-container">
+        <form asp-action="ForgotPass" class="main-form active">
+            <h1>Verify your information</h1>
+            <span class="text-danger">@ViewData["ForgotPassError"]</span>
+            <div class="txtb form-group">
+                <input id="username" asp-for="Username">
+                <span data-placeholder="Username"></span>
+            </div>
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <div class="txtb form-group">
+                <input id="email" asp-for="Email">
+                <span data-placeholder="Email"></span>
+            </div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <input id="loginButton" type="submit" class="logbtn" value="Verify">
+            <div class="bottom-text">
+                Don't have account? <span class="signup-link"><a asp-action="Index">Login</a></span>
+            </div>
+        </form>
+    </div>*@
+<div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); height: 100rem">
+</div>
+<div class="container py-5 py-sm-7">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <!-- Card -->
+            <div class="card card-lg mb-5">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form class="js-validate" asp-action="ForgotPass">
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <h1>Verify your information</h1>
+                                <span class="text-danger">@ViewData["ForgotPassError"]</span>
+                            </div>
+                        </div>
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signinSrEmail">Username</label>
+                            <input class="form-control form-control-lg" id="username" asp-for="Username" placeholder="Username" required data-msg="Please enter your username">
+                        </div>
+                        <!-- End Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signinSrEmail">Email</label>
+                            <input class="form-control form-control-lg" id="email" asp-for="Email" placeholder="Email" required data-msg="Please enter your Email">
+                        </div>
+
+                        <button id="loginButton" type="submit" class="btn btn-lg btn-block btn-primary" value="Verify">Verify</button>
+
+                        <div class="text-center mt-2">
+                            <a class="btn btn-link" asp-action="Index">
+                                <i class="tio-chevron-left"></i> Back to Sign in
+                            </a>
+                        </div>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+            <!-- End Card -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

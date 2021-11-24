@@ -1,0 +1,62 @@
+﻿/*Page common css*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    min-width: 1400px;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1400px;
+}
+
+h2 {
+    height: 70px;
+    line-height: 70px;
+}
+
+/*Content*/
+/* CONTENT */
+
+.content {
+    display: flex;
+    background: #f2f2f2;
+    margin: 10px 0;
+}
+
+.left-sidebar {
+    flex: 1;
+}
+
+.right-sidebar {
+    flex: 3;
+    position: static;
+    margin-top: 20px;
+}
+
+.side-navbar {
+    top: 80px;
+    position: sticky;
+}
+
+.main-content {
+    flex: 3;
+    margin: 0 20px;
+    height: 1000px;
+    background: none;
+    border-radius: 10px;
+}
+/*Error message*/
+span.text-danger {
+    color: red;
+    font-size: 10px;
+}
+/**/

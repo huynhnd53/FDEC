@@ -1,0 +1,77 @@
+﻿@model ForgotPassModel
+@{
+    Layout = "_SigninLayout";
+    ViewData["Title"] = "Set New Password";
+    var username = ViewData["Username"];
+    ForgotPassModel forgot = ViewData["ForgotPassModel"] as ForgotPassModel;
+
+}
+@*<link href="~/assets/icon-set/style.css" rel="stylesheet" />
+<link href="~/css/theme.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">*@
+
+@*<div class="login-form-container">
+        <form asp-action="ResetPass" class="main-form active">
+            <h1>Set New Password</h1>
+            <span class="text-danger">@ViewData["LoginError"]</span>
+            <div class="txtb form-group">
+                <input id="password" asp-for="Username" value="@forgot.Username" readonly>
+            </div>
+            <div class="txtb form-group">
+                <input id="password" asp-for="Password">
+                <span data-placeholder="New Password"></span>
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <div class="txtb form-group">
+                <input id="reenterPassword" asp-for="RePassword">
+                <span data-placeholder="Re Enter Password"></span>
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input id="loginButton" type="submit" class="logbtn" value="Submit">
+        </form>
+    </div>*@
+<div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); height: 100rem">
+</div>
+<div class="container py-5 py-sm-7">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <!-- Card -->
+            <div class="card card-lg mb-5">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form class="js-validate" asp-action="ResetPass">
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <h1>Set New Password</h1>
+                                <span class="text-danger">@ViewData["LoginError"]</span>
+                            </div>
+                        </div>
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signinSrEmail">Password</label>
+                            <input class="form-control form-control-lg" id="password" asp-for="Password" placeholder="Password" required data-msg="Please enter your password">
+                        </div>
+                        <!-- End Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signinSrEmail">Re-Enter: Password</label>
+                            <input class="form-control form-control-lg" id="password" asp-for="RePassword" placeholder="RePassword" required data-msg="Please enter your RePassword">
+                        </div>
+
+                        <button id="loginButton" type="submit" class="btn btn-lg btn-block btn-primary" value="Submit">Submit</button>
+
+                        <div class="text-center mt-2">
+                            <a class="btn btn-link" asp-action="Register">
+                                <i class="tio-chevron-left"></i> Back to Sign in
+                            </a>
+                        </div>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+            <!-- End Card -->
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

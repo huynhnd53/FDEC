@@ -1,0 +1,90 @@
+﻿@model LoginModel
+@{
+    Layout = "_SigninLayout";
+    ViewData["Title"] = "Signin to F-Deli";
+}
+
+@*<div class="login-form-container">
+        <form asp-action="Login" class="main-form active">
+            <h1>Login<br />Fast Delivery EC</h1>
+            <span style="color:green">@ViewData["PasswordSuccess"]</span>
+            <span class="text-danger">@ViewData["LoginError"]</span>
+            <div class="txtb form-group">
+                <input id="username" asp-for="Username">
+                <span data-placeholder="Username"></span>
+            </div>
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <div class="txtb form-group">
+                <input id="password" asp-for="Password">
+                <span data-placeholder="Password"></span>
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input id="loginButton" type="submit" class="logbtn" value="Login">
+            <div class="bottom-text">
+                <div>
+                    Don't have account? <span class="signup-link"><a asp-action="Register"> Sign up </a></span>
+                </div>
+                <div>
+                    You are forgot password?<span class="signup-link"><a asp-action="ForgotPass"> Forgot Password </a></span>
+                </div>
+            </div>
+        </form>
+    </div>*@
+<div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); height: 100rem">
+</div>
+<div class="container py-5 py-sm-7">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <!-- Card -->
+            <div class="card card-lg mb-5">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form class="js-validate" asp-action="Login">
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <h1 class="display-4">Sign in F-Deli</h1>
+                                <span style="color:green">@ViewData["PasswordSuccess"]</span>
+                                <span class="text-danger">@ViewData["LoginError"]</span>
+                                <p>Don't have an account yet? <a asp-action="Register">Sign up here</a></p>
+                            </div>
+                        </div>
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signinSrEmail">Username</label>
+                            <input class="form-control form-control-lg" id="username" asp-for="Username" placeholder="Username" required data-msg="Please enter a Username">
+                        </div>
+                        <!-- End Form Group -->
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signupSrPassword" tabindex="0">
+                                <span class="d-flex justify-content-between align-items-center">
+                                    Password
+                                    <a class="input-label-secondary" asp-action="ForgotPass"> Forgot Password?</a>
+                                </span>
+                            </label>
+                            <div class="input-group input-group-merge">
+                                <input id="password" class="js-toggle-password form-control form-control-lg" asp-for="Password" placeholder="password" data-msg="Your password is invalid. Please try again." required>
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+                        <!-- Checkbox -->
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox">
+                                <label class="custom-control-label font-size-sm text-muted" for="termsCheckbox"> Remember me</label>
+                            </div>
+                        </div>
+                        <!-- End Checkbox -->
+                        <input id="loginButton" type="submit" class="btn btn-lg btn-block btn-primary" value="Login">
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+            <!-- End Card -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,108 @@
+﻿/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+}
+
+.logo {
+    margin-left: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.header .profile {
+    margin-right: 20px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    padding: 3px 7px;
+    border-radius: 20px;
+}
+
+.header .profile {
+    transition: 0.2s;
+    background: white;
+    border: solid 2px white;
+}
+
+.header .profile:hover {
+    cursor: pointer;
+    /* background: rgb(11, 109, 114); */
+    background: rgb(78, 159, 170);
+    color: white;
+    border: solid 2px white;
+}
+
+.header .profile:hover .profile-name {
+    color: white;
+}
+
+.profile-name {
+    margin-left: 7px;
+    font-family: 'Open Sans', sans-serif;
+    color: #66A5AD;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-img-wrapper {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-img-wrapper img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    /* object-fit: cover;
+    object-position: center; */
+}
+
+.search {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 400px;
+    padding: 0 4px;
+}
+
+.fa-search {
+    padding: 5px;
+}
+
+button[type=submit] {
+    border: none;
+    background: transparent;
+}
+
+button[type=submit]:hover {
+    cursor: pointer;
+}
+
+header {
+    background: #66A5AD;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: sticky;
+    /* top: 0;
+    position: -webkit-sticky;
+    position: sticky; */
+}

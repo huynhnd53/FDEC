@@ -1,0 +1,88 @@
+﻿@model RegisterModel
+@{
+    Layout = "_SigninLayout";
+    ViewData["Title"] = "Register";
+}
+@*<div class="login-form-container">
+        <form asp-action="Register" class="main-form register-form">
+            <h1>Register</h1>
+            <span class="text-danger">@ViewData["RegisterError"]</span>
+            <div class="txtb">
+                <input asp-for="Username">
+                <span data-placeholder="Username"></span>
+            </div>
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <div class="txtb">
+                <input asp-for="Password">
+                <span data-placeholder="Password"></span>
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <div class="txtb">
+                <input asp-for="RePassword">
+                <span data-placeholder="Re Enter Password"></span>
+            </div>
+            <span asp-validation-for="RePassword" class="text-danger"></span>
+            <input type="submit" class="logbtn" value="Register">
+            <div class="bottom-text">
+                Don't have account? <span class="signup-link"><a asp-action="Index"> Login </a></span>
+            </div>
+        </form>
+    </div>*@
+
+<div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); height: 100rem">
+</div>
+<div class="container py-5 py-sm-7">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <!-- Card -->
+            <div class="card card-lg mb-5">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form class="js-validate" asp-action="Register">
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <h1 class="display-4">Create your account</h1>
+                                <span class="text-danger">@ViewData["RegisterError"]</span>
+                                <p>Already have an account? <a asp-action="Index">Sign in here</a></p>
+                            </div>
+                        </div>
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signinSrEmail">Username</label>
+                            <input class="form-control form-control-lg" id="username" asp-for="Username" placeholder="Username" required data-msg="Please enter a Username">
+                        </div>
+                        <!-- End Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signupSrPassword" tabindex="0">
+                                <span class="d-flex justify-content-between align-items-center">
+                                    Password
+                                </span>
+                            </label>
+                            <div class="input-group input-group-merge">
+                                <input id="password" class="js-toggle-password form-control form-control-lg" asp-for="Password" placeholder="Password" data-msg="Your password is invalid. Please try again." required>
+                            </div>
+                        </div>
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="input-label" for="signupSrPassword" tabindex="0">
+                                <span class="d-flex justify-content-between align-items-center">
+                                    RePassword
+                                </span>
+                            </label>
+                            <div class="input-group input-group-merge">
+                                <input id="repassword" class="js-toggle-password form-control form-control-lg" asp-for="RePassword" placeholder="RePassword" data-msg="Your RePassword is invalid. Please try again." required>
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+                        <button type="submit" class="btn btn-lg btn-block btn-primary mb-2" value="Register">Create an account</button>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+            <!-- End Card -->
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "ViewHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <!-- Start project -->
+    <!-- Start banner -->
+    <div class="justify-content-lg-center">
+        <div class="">
+            <div id="banner">
+                <div id="wrapper">
+                </div>
+                <div id="task_btn">
+                    <div id="task">
+                        <div id="space"></div>
+                        <button type="button" class="btn btn-light"><a href="/Order/ListOrder" style="text-decoration: none;"><i class="fas fa-sitemap icon"></i> Theo dõi và kiểm tra</a></button>
+                        <button type="button" class="btn btn-light"><a href="/Order/OrderQuotes" style="text-decoration: none;"><i class="fas fa-money-check  icon"></i>Báo giá</a></button>
+                        <button type="button" class="btn btn-light" id="newOrder"><a href="/Order/CreateOrder" style="text-decoration: none;"><i class="fas fa-box icon"></i>Gửi hàng ngay</a></button>
+                    </div>
+                </div>
+                <div id="task_bottom">
+                    <div class="task_b">
+                        <div class="input-group flex-nowrap button_task">
+                            <span class="input-group-text" id="addon-wrapping">Số Hàng</span>
+                            <input type="text" class="form-control" placeholder="Số Hàng" aria-label="Username" aria-describedby="addon-wrapping">
+                            <button type="button" class="btn btn-warning" id="searchOrder">Search Order</button>
+                        </div>
+                        <div id="task_des">
+                            <a href="/Order/ListOrder">Tôi có thể tìm thấy số đơn hàng của tôi ở đâu?</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End banner -->
+            <!-- start Gửi hàng -->
+            <div id="gh">
+                <div class="">
+                    <div id="gh_img">
+                        <div class="image">
+                            <img src="~/assets/img/get-started-banner.jpg" />
+                        </div>
+                        <div id="gh_boxdes">
+                            <div class="box">
+                                <div class="title">
+                                    <h1>
+                                        Bắt đầu gửi hàng với F-Deli
+                                    </h1>
+                                </div>
+                                <div class="paragraph">
+                                    Dù đó là một gói hàng, tài liệu hay pallet, chúng tôi <br> đều đảm bảo giao nhận đúng giờ. Và với công cụ đặt <br> gửi hàng F-Deli mới đã được cải thiện, việc đặt gửi lô <br> hàng của quý khách chưa bao giờ dễ dàng hơn thế.
+                                </div>
+                                <button type="button" class="btn btn-outline-light" id="newOrder"><a href="/Order/CreateOrder" style="text-decoration: none;">Gửi hàng ngay</a></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gh_content"></div>
+                </div>
+            </div>
+            <!-- End Gửi hàng -->
+            <!-- Start More Information -->
+            @*<div id="Infor">
+                    <div class="container">
+                        <div class="header"></div>
+                        <div class="object">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="content">
+                                        <div class="news">
+                                            <img src="~/assets/img/card-brexit-apac.jpg" alt="">
+                                            <div class="title">
+                                                <h2>
+                                                    Bạn đã sẵn sàng cho sự kiện Brexit?
+                                                </h2>
+                                            </div>
+                                            <div class="paragraph">
+                                                Xem câu trả lời cho những câu hỏi thường gặp về việc làm thế nào để chuẩn bị cho kinh doanh của bạn trong tình hình Brexit.
+                                            </div>
+                                            <div class="link"><a href="#">Xem Thêm</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="content">
+                                        <div class="news">
+                                            <img src="~/assets/img/card-brexit-apac.jpg" alt="">
+                                            <div class="title">
+                                                <h2>
+                                                    Bạn đã sẵn sàng cho sự kiện Brexit?
+                                                </h2>
+                                            </div>
+                                            <div class="paragraph">
+                                                Xem câu trả lời cho những câu hỏi thường gặp về việc làm thế nào để chuẩn bị cho kinh doanh của bạn trong tình hình Brexit.
+                                            </div>
+                                            <div class="link"><a href="#">Xem Thêm</a></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="content">
+                                        <div class="news">
+                                            <img src="~/assets/img/card-brexit-apac.jpg" alt="">
+                                            <div class="title">
+                                                <h2>
+                                                    Bạn đã sẵn sàng cho sự kiện Brexit?
+                                                </h2>
+                                            </div>
+                                            <div class="paragraph">
+                                                Xem câu trả lời cho những câu hỏi thường gặp về việc làm thế nào để chuẩn bị cho kinh doanh của bạn trong tình hình Brexit.
+                                            </div>
+                                            <div class="link"><a href="#">Xem Thêm</a></div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            <!-- End More Information -->
+            <!-- End Project  -->
+        </div>
+    </div>
+</div>
+
+

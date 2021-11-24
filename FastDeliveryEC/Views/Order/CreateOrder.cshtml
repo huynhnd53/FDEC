@@ -1,0 +1,78 @@
+﻿@model OrderModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Order";
+    List<DataLibrary.Models.CityModel> lstCity = ViewData["ListCity"] as List<DataLibrary.Models.CityModel>;
+    List<DataLibrary.Models.RulePriceModel> lstRulePrices = ViewData["ListRulePrice"] as List<DataLibrary.Models.RulePriceModel>;
+}
+<div class="container-fluid">
+    <div class="container py-5 py-sm-7">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6">
+                <div class="card card-lg mb-5">
+                    <div class="card-body ">
+                        <form class="js-validate" asp-action="CreateOrder">
+                            <div class="text-center">
+                                <div class="mb-5">
+                                    <h1 class="display-4">Create new order</h1>
+                                    <span class="text-danger">@ViewData["CreateFailOrder"]</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="formSelectAddressFrom" class="input-label" style="font-size: 1.2rem;">Address From:</label>
+                                <select id="formSelectAddressFrom" asp-for="AddressFrom" class="custom-select custom-select-flush">
+                                    @foreach (var c in lstCity)
+                                    {
+                                        <option value="@c.ID" style="font-size: 1rem;">@c.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="formSelectAddressOrder" class="input-label" style="font-size: 1.2rem;">Address Oder:</label>
+                                <select id="formSelectAddressOrder" asp-for="AddressOrder" class="custom-select custom-select-flush">
+                                    @foreach (var c in lstCity)
+                                    {
+                                        <option value="@c.ID" style="font-size: 1rem;">@c.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="formSelectWeight" class="input-label" style="font-size: 1.2rem;">Weight(Kg):</label>
+                                <select id="formSelectWeight" asp-for="WeightID" class="custom-select custom-select-flush">
+                                    @foreach (var w in lstRulePrices)
+                                    {
+                                        <option value="@w.ID" style="font-size: 1rem;"> ~@w.Weight</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-5">
+                                    <span class="text-danger">@ViewData["NumberPhoneOrder"]</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="input-label" for="exampleFormControlInput1">Number Phone Order</label>
+                                <input type="text" id="numberPhone" asp-for="NumberPhoneOrder" class="form-control" placeholder="0980000001">
+                            </div>
+                            <button type="button" class="btn btn-lg active btn-block btn-secondary mb-2" id="btnCalculateCash" value="btnCalculateCash">Estimate</button>
+                            <div class="form-group">
+                                <label class="input-label" style="font-size: 1.2rem;">Estimated price (VND):</label>
+                                <input type="text" class="form-control" style="font-size: 1rem;" asp-for="Cash" id="CashValue" placeholder="Disabled input" value="0.00" disabled>
+                            </div>
+                            <button type="submit" class="btn btn-lg active btn-block btn-primary mb-2" id="btnCreateOrder" value="CreateOrder">Create Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<input type="hidden" id="urlGetListCity" value="@Url.Action("AjaxGetListCity","Order")" />
+<input type="hidden" id="urlGetListWeight" value="@Url.Action("AjaxGetListWeight","Order")" />
+<input type="hidden" id="urlCalculateCash" value="@Url.Action("AjaxCalculateCash","Order")" />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

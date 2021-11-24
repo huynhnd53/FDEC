@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Delivery EC</title>
+    <link href="~/css/comment.css" rel="stylesheet" />
+    <link href="~/css/style2.css" rel="stylesheet" />
+    <link href="~/assets/css/style.custom.css" rel="stylesheet" />
+    <link href="~/assets/css/theme.min.css" rel="stylesheet" />
+    <link href="~/css/docs.min.css" rel="stylesheet" />
+    <link href="~/css/style.custom.css" rel="stylesheet" />
+    <link href="~/css/theme.min.css" rel="stylesheet" />
+    <link href="~/assets/icon-set/style.css" rel="stylesheet" />
+    <link href="~/assets/vendor/hs-unfold/dist/hs-unfold.css" rel="stylesheet" />
+    <link href="~/assets/vendor/hs-unfold/dist/hs-unfold.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/assets/vendor/select2/dist/css/select2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="myHeader" class="header navbar navbar-fixed">
+        @{ await Html.RenderPartialAsync("_Header"); }
+    </header>
+    <main id="content" role="main" class="main-form">
+        @RenderBody()
+    </main>
+    <footer id="myFooter" class="footer">
+        @{ await Html.RenderPartialAsync("_Footer"); }
+    </footer>
+
+    <script src="~/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/ViewHomeJS/viewhome.js"></script>
+    <script src="~/js/OrderJS/order.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+
+
+    <script>
+        $(function () {
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > 10) {
+                    $('.navbar').addClass('active');
+                } else {
+                    $('.navbar').removeClass('active');
+                }
+            });
+        });
+
+        $(document).on('ready', function () {
+            // initialization of unfold
+            $('.js-hs-unfold-invoker').each(function () {
+                var unfold = new HSUnfold($(this)).init();
+            });
+            // initialization of select2
+            $('.js-select2-custom').each(function () {
+                var select2 = $.HSCore.components.HSSelect2.init($(this));
+            });
+            // initialization of form search
+            $('.js-form-search').each(function () {
+                new HSFormSearch($(this)).init()
+            });
+
+            // initialization of counters
+            $('.js-counter').each(function () {
+                var counter = new HSCounter($(this)).init();
+            });
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

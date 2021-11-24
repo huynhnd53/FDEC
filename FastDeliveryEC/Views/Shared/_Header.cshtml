@@ -1,0 +1,42 @@
+﻿@using DataLibrary.Models
+@{
+    DataLibrary.Models.UserModel thisUser = Context.Session.GetObjectFromJson<DataLibrary.Models.UserModel>("userss");
+}
+<div >
+    <nav class="navbar bg-color-header navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <h1 class="logo "><a asp-controller="Home" asp-action="ViewHome">F-Deli</a></h1>
+            <div class="search icon-centered">
+                @*<form asp-controller="Search" asp-action="SearchByKey">
+                    <input type="text" name="textSearch" placeholder="Search.. ">
+                    <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>*@
+            </div>
+            @if (thisUser != null)
+            {
+                <a asp-action="UserProfile" asp-controller="User">
+                    <div class="profile">
+                        <div class="avatar avatar-sm avatar-circle">
+                            <img class="avatar-img" src="~/assets/img/download.png" alt="Image Description">
+                        </div>
+                        <span class="profile-name">@thisUser.Fullname</span>
+                    </div>
+                </a>
+                <a class="btn " href="~/Login/Logout">
+                    <i class="tio-sign-out"></i>Sign out
+                </a>
+            }
+            else
+            {
+                <a class="btn " href="~/Login/Login">
+                    <i class="tio-sign-in"></i>  Login
+                </a>
+                <a class="btn " href="~/Login/Register">
+                    <i class=""></i> Register
+                </a>
+            }
+        </div>
+    </nav>
+</div>
