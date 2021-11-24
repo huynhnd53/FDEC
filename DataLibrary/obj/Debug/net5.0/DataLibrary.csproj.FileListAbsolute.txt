@@ -1,0 +1,12 @@
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\bin\Debug\net5.0\DataLibrary.deps.json
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\bin\Debug\net5.0\DataLibrary.dll
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\bin\Debug\net5.0\ref\DataLibrary.dll
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\bin\Debug\net5.0\DataLibrary.pdb
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.csproj.AssemblyReference.cache
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.AssemblyInfoInputs.cache
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.AssemblyInfo.cs
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.csproj.CoreCompileInputs.cache
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.dll
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\ref\DataLibrary.dll
+D:\Backup\Backup\FPT\FPT\ki VII\ISC\Group6_ISC_Project_F-Deli\DataLibrary\obj\Debug\net5.0\DataLibrary.pdb
